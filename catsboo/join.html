@@ -17,28 +17,29 @@
 <body>
 <main class="join">
   <img class="icon" src="icon.png" alt="MewHop" width="120" height="120">
-  <h1 data-en="Your friend invites you to play" data-ru="Друг зовёт вас сыграть">Your friend invites you to play</h1>
+  <h1 data-en="Your friend invites you to play" data-ru="Друг зовёт вас сыграть" data-uk="Друг кличе вас зіграти">Your friend invites you to play</h1>
   <p class="code" id="code"></p>
 
   <a class="button main" id="open" href="catsboo://join"
-     data-en="Open MewHop and join" data-ru="Открыть MewHop и присоединиться">Open MewHop and join</a>
+     data-en="Open MewHop and join" data-ru="Открыть MewHop и присоединиться" data-uk="Відкрити MewHop і приєднатися">Open MewHop and join</a>
   <a class="button" href="https://apps.apple.com/app/id6834719630"
-     data-en="Get MewHop on the App Store" data-ru="Скачать MewHop в App Store">Get MewHop on the App Store</a>
+     data-en="Get MewHop on the App Store" data-ru="Скачать MewHop в App Store" data-uk="Завантажити MewHop з App Store">Get MewHop on the App Store</a>
 
   <p class="hint" data-en="Don't have the game yet? Install it, sign in to Game Center, then come back here and tap “Open MewHop and join”. The invite waits for 5 minutes."
-     data-ru="Ещё нет игры? Установите её, войдите в Game Center, вернитесь сюда и нажмите «Открыть MewHop и присоединиться». Приглашение ждёт 5 минут.">
+     data-ru="Ещё нет игры? Установите её, войдите в Game Center, вернитесь сюда и нажмите «Открыть MewHop и присоединиться». Приглашение ждёт 5 минут."
+     data-uk="Ще немає гри? Установіть її, увійдіть у Game Center, поверніться сюди й натисніть «Відкрити MewHop і приєднатися». Запрошення чекає 5 хвилин.">
     Don't have the game yet? Install it, sign in to Game Center, then come back here and tap “Open MewHop and join”. The invite waits for 5 minutes.</p>
 
   <footer>© 2026 FleX Co · <a href="index.html">Support</a> · <a href="privacy.html">Privacy</a></footer>
 </main>
 <script>
   const code = (new URLSearchParams(location.search).get("code") || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 12);
-  const russian = (navigator.language || "").toLowerCase().startsWith("ru") ||
-    (navigator.language || "").toLowerCase().startsWith("uk");
-  if (russian) {
-    document.documentElement.lang = "ru";
-    document.title = "Сыграем в MewHop!";
-    document.querySelectorAll("[data-ru]").forEach(el => { el.textContent = el.dataset.ru; });
+  const language = (navigator.language || "").toLowerCase().slice(0, 2);
+  const titles = { ru: "Сыграем в MewHop!", uk: "Зіграймо в MewHop!" };
+  if (titles[language]) {
+    document.documentElement.lang = language;
+    document.title = titles[language];
+    document.querySelectorAll("[data-" + language + "]").forEach(el => { el.textContent = el.dataset[language]; });
   }
   if (code) {
     document.getElementById("code").textContent = code;
