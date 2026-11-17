@@ -29,3 +29,21 @@ nav a { margin-right: 16px; font-weight: 600; }
 .updated { opacity: 0.7; font-size: 15px; }
 hr { border: none; border-top: 1px solid #DDB898; margin: 32px 0; }
 footer { margin-top: 32px; text-align: center; opacity: 0.7; font-size: 15px; }
+
+.join { max-width: 420px; text-align: center; }
+.join .icon { border-radius: 26px; box-shadow: 0 6px 16px rgba(138, 86, 52, 0.3); }
+.join h1 { margin: 20px 0 8px; font-size: 26px; }
+.join .code { font: 700 30px ui-monospace, Menlo, monospace; letter-spacing: 6px; margin: 8px 0 24px; }
+.join .hint { font-size: 15px; opacity: 0.8; }
+.button {
+  display: block;
+  margin: 12px 0;
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: 2px solid var(--ink);
+  background: #FFF6EC;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+.button.main { background: var(--cocoa); color: #fff; }

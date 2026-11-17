@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["5549269674.com.alexla.catsboo"],
+        "components": [{ "/": "/catsboo/join*", "comment": "Cats Boo invite links" }]
+      }
+    ]
+  }
+}
