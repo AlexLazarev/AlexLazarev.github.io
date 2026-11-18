@@ -3,7 +3,10 @@
     "details": [
       {
         "appIDs": ["5549269674.com.alexla.catsboo"],
-        "components": [{ "/": "/catsboo/join*", "comment": "Cats Boo invite links" }]
+        "components": [
+          { "/": "/mewhop/join*", "comment": "MewHop invite links" },
+          { "/": "/catsboo/join*", "comment": "Invite links from versions before the site moved" }
+        ]
       }
     ]
   }

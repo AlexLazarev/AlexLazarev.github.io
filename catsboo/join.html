@@ -3,50 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Play MewHop with me!</title>
-  <meta name="description" content="Your friend invites you to a match in MewHop, a cozy strategy duel with kittens.">
-  <meta property="og:title" content="Play MewHop with me! 🐱">
-  <meta property="og:description" content="Tap to join my match. A cozy strategy duel with kittens on a quilted bed.">
-  <meta property="og:image" content="https://alexlazarev.github.io/catsboo/icon.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="apple-itunes-app" content="app-id=6834719630">
-  <link rel="icon" href="icon.png">
-  <link rel="stylesheet" href="style.css">
+  <title>MewHop</title>
+  <script>location.replace(location.href.replace("/catsboo/", "/mewhop/"));</script>
+  <meta http-equiv="refresh" content="0; url=https://alexlazarev.github.io/mewhop/">
+  <link rel="canonical" href="https://alexlazarev.github.io/mewhop/">
 </head>
 <body>
-<main class="join">
-  <img class="icon" src="icon.png" alt="MewHop" width="120" height="120">
-  <h1 data-en="Your friend invites you to play" data-ru="Друг зовёт вас сыграть" data-uk="Друг кличе вас зіграти">Your friend invites you to play</h1>
-  <p class="code" id="code"></p>
-
-  <a class="button main" id="open" href="catsboo://join"
-     data-en="Open MewHop and join" data-ru="Открыть MewHop и присоединиться" data-uk="Відкрити MewHop і приєднатися">Open MewHop and join</a>
-  <a class="button" href="https://apps.apple.com/app/id6834719630"
-     data-en="Get MewHop on the App Store" data-ru="Скачать MewHop в App Store" data-uk="Завантажити MewHop з App Store">Get MewHop on the App Store</a>
-
-  <p class="hint" data-en="Don't have the game yet? Install it, sign in to Game Center, then come back here and tap “Open MewHop and join”. The invite waits for 5 minutes."
-     data-ru="Ещё нет игры? Установите её, войдите в Game Center, вернитесь сюда и нажмите «Открыть MewHop и присоединиться». Приглашение ждёт 5 минут."
-     data-uk="Ще немає гри? Установіть її, увійдіть у Game Center, поверніться сюди й натисніть «Відкрити MewHop і приєднатися». Запрошення чекає 5 хвилин.">
-    Don't have the game yet? Install it, sign in to Game Center, then come back here and tap “Open MewHop and join”. The invite waits for 5 minutes.</p>
-
-  <footer>© 2026 FleX Co · <a href="index.html">Support</a> · <a href="privacy.html">Privacy</a></footer>
-</main>
-<script>
-  const code = (new URLSearchParams(location.search).get("code") || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 12);
-  const language = (navigator.language || "").toLowerCase().slice(0, 2);
-  const titles = { ru: "Сыграем в MewHop!", uk: "Зіграймо в MewHop!" };
-  if (titles[language]) {
-    document.documentElement.lang = language;
-    document.title = titles[language];
-    document.querySelectorAll("[data-" + language + "]").forEach(el => { el.textContent = el.dataset[language]; });
-  }
-  if (code) {
-    document.getElementById("code").textContent = code;
-    document.getElementById("open").href = "catsboo://join?code=" + encodeURIComponent(code);
-  } else {
-    document.getElementById("open").style.display = "none";
-  }
-</script>
+  <p>MewHop has moved to <a href="https://alexlazarev.github.io/mewhop/">alexlazarev.github.io/mewhop</a>.</p>
 </body>
 </html>
